@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Nutriología | MediWork</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="shortcut icon" href="/assets/img/logo/favicon.png" />
+  <link rel="stylesheet" href="assets/css/servicios.css">
+  <style>
+    :root {
+      --blue-500: #3b82f6;
+      --blue-600: #2563eb;
+      --blue-700: #1d4ed8;
+      --green-500: #22c55e;
+      --green-600: #16a34a;
+      --green-50:  #f0fdf4;
+      --green-100: #dcfce7;
+      --green-200: #bbf7d0;
+      --gray-50:  #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-400: #9ca3af;
+      --gray-600: #4b5563;
+      --gray-900: #111827;
+    }
+
+    .page-hero {
+      background: linear-gradient(135deg, #14532d 0%, #16a34a 60%, #4ade80 100%);
+      padding: 120px 0 70px;
+      position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url('https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200') center/cover no-repeat;
+      opacity: .18;
+    }
+    .page-hero-inner { position: relative; z-index: 1; }
+    .page-hero-eyebrow {
+      display: inline-flex; align-items: center; gap: .45rem;
+      background: rgba(255,255,255,.15); backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,.25);
+      color: #fff; font-size: .78rem; font-weight: 600; letter-spacing: .08em;
+      text-transform: uppercase; border-radius: 99px; padding: .35rem .9rem;
+      margin-bottom: 1.1rem;
+    }
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      color: #fff; font-weight: 400; line-height: 1.2; margin-bottom: .9rem;
+    }
+    .page-hero h1 em { font-style: italic; color: #bbf7d0; }
+    .page-hero p { color: rgba(255,255,255,.82); font-size: 1.05rem; max-width: 52ch; }
+
+    .breadcrumb-wrap {
+      background: var(--gray-50); border-bottom: 1px solid var(--gray-200);
+      padding: .65rem 0; font-size: .8rem; color: var(--gray-400);
+    }
+    .breadcrumb-wrap a { color: var(--green-600); text-decoration: none; }
+    .breadcrumb-wrap span { margin: 0 .4rem; }
+
+    /* ── Frase destacada ── */
+    .quote-card {
+      background: linear-gradient(135deg, var(--green-50), var(--green-100));
+      border-left: 4px solid var(--green-500);
+      border-radius: 0 16px 16px 0;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+    .quote-card blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem; color: var(--green-600);
+      font-style: italic; margin: 0 0 .5rem;
+    }
+    .quote-card cite { font-size: .82rem; color: var(--gray-400); font-style: normal; }
+
+    /* ── Servicio page ── */
+    .servicio-page-section { padding: 72px 0; }
+
+    .servicio-hero-img {
+      border-radius: 20px; overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,.12);
+      height: 420px;
+    }
+    .servicio-hero-img img { width: 100%; height: 100%; object-fit: cover; }
+
+    .servicio-info h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      color: var(--gray-900); font-weight: 400; line-height: 1.25; margin-bottom: 1.1rem;
+    }
+    .servicio-info h2 em { color: var(--green-600); font-style: italic; }
+    .servicio-info .lead { color: var(--gray-600); font-size: 1.05rem; line-height: 1.75; margin-bottom: 1.5rem; }
+
+    .feature-list { list-style: none; padding: 0; margin: 0 0 2rem; }
+    .feature-list li {
+      display: flex; align-items: flex-start; gap: .85rem;
+      padding: .7rem 0; border-bottom: 1px solid var(--gray-100);
+      color: var(--gray-600); font-size: .96rem;
+    }
+    .feature-list li:last-child { border-bottom: none; }
+    .feature-list li .fi-icon {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: var(--green-50); display: flex; align-items: center; justify-content: center;
+      color: var(--green-600); font-size: .85rem; flex-shrink: 0; margin-top: .05rem;
+    }
+
+    .stats-row { display: flex; gap: 1.5rem; margin-bottom: 2.2rem; flex-wrap: wrap; }
+    .stat-box {
+      background: var(--gray-50); border: 1px solid var(--gray-200);
+      border-radius: 14px; padding: 1.1rem 1.4rem; flex: 1; min-width: 110px; text-align: center;
+    }
+    .stat-box .sv { font-size: 1.6rem; font-weight: 700; color: var(--green-600); line-height: 1; }
+    .stat-box .sl { font-size: .72rem; color: var(--gray-400); text-transform: uppercase; letter-spacing: .06em; margin-top: .3rem; }
+
+    /* ── Pilares de bienestar ── */
+    .pilares-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .pilar-card {
+      background: #fff; border: 1px solid var(--gray-200); border-radius: 18px;
+      padding: 2rem 1.5rem; text-align: center;
+      transition: transform .25s, box-shadow .25s;
+    }
+    .pilar-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,.09); }
+    .pilar-icon {
+      width: 56px; height: 56px; border-radius: 14px;
+      background: var(--green-50); display: flex; align-items: center; justify-content: center;
+      color: var(--green-600); font-size: 1.4rem; margin: 0 auto 1rem;
+    }
+    .pilar-card h5 { font-size: .97rem; font-weight: 600; color: var(--gray-900); margin-bottom: .4rem; }
+    .pilar-card p  { font-size: .84rem; color: var(--gray-400); margin: 0; }
+
+    #contacto {
+      background: linear-gradient(135deg, #14532d 0%, #16a34a 100%);
+      padding: 80px 0;
+    }
+    .cta-inner { text-align: center; }
+    .cta-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem,4vw,2.8rem); color: #fff; font-weight: 400;
+      line-height: 1.2; margin-bottom: 1rem;
+    }
+    .cta-heading em { font-style: italic; color: #bbf7d0; }
+    .cta-sub { color: rgba(255,255,255,.78); font-size: 1rem; max-width: 44ch; margin: 0 auto 2rem; }
+    .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-cta-white {
+      background: #fff; color: var(--green-700,#15803d); font-weight: 600; font-size: .9rem;
+      border-radius: 99px; padding: .8rem 1.8rem; text-decoration: none;
+      display: inline-flex; align-items: center; gap: .5rem;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .btn-cta-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.18); color: var(--green-700,#15803d); }
+    .btn-cta-ghost {
+      border: 2px solid rgba(255,255,255,.45); color: #fff; font-weight: 600; font-size: .9rem;
+      border-radius: 99px; padding: .8rem 1.8rem; text-decoration: none;
+      display: inline-flex; align-items: center; gap: .5rem;
+      transition: background .2s;
+    }
+    .btn-cta-ghost:hover { background: rgba(255,255,255,.12); color: #fff; }
+
+    .section-eyebrow {
+      display: inline-flex; align-items: center; gap: .45rem;
+      border: 1px solid var(--gray-200); background: var(--gray-50);
+      color: var(--gray-600); font-size: .72rem; font-weight: 600;
+      letter-spacing: .08em; text-transform: uppercase; border-radius: 99px;
+      padding: .35rem .9rem;
+    }
+
+    .gallery-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-top: 2.5rem; }
+    .gallery-item { border-radius: 14px; overflow: hidden; height: 180px; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+    .gallery-item:hover img { transform: scale(1.05); }
+    @media(max-width:576px){ .gallery-grid{ grid-template-columns:1fr 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="/" style="display:flex;align-items:center;padding:0;">
+        <img src="/assets/img/logo/logo-mediwork.svg" alt="Mediwork" style="height:38px;width:auto;display:block;">
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="/servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="/nosotros">Nosotros</a></li>
+        </ul>
+        <ul class="navbar-nav align-items-lg-center ms-lg-4 gap-2">
+          <li class="nav-item">
+            <a href="tel:+524921297099" class="nav-link d-flex align-items-center gap-1 fw-semibold" style="font-size:0.88rem;">
+              <i class="fas fa-phone-alt" style="color:var(--blue-500);font-size:0.8rem;"></i>
+              <span class="d-none d-lg-inline">492 129 7099</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/contacto" class="nav-link nav-cta">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <span class="page-hero-eyebrow"><i class="fas fa-circle-dot" style="font-size:.55rem"></i> Servicios Adicionales</span>
+      <h1>Nutriología <em>& Medicina</em></h1>
+      <p>No solo es cuidar tu salud, es cuidar tu vida. Médico y Nutrióloga en un solo lugar para un bienestar integral.</p>
+    </div>
+  </section>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb-wrap">
+    <div class="container">
+      <a href="/">Inicio</a><span>/</span>
+      <a href="/servicios">Servicios</a><span>/</span>
+      Nutriología
+    </div>
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <section class="servicio-page-section">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+
+        <!-- Imagen -->
+        <div class="col-lg-5">
+          <div class="servicio-hero-img">
+            <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Nutriología MediWork">
+          </div>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="https://images.pexels.com/photos/3622608/pexels-photo-3622608.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Consulta nutrición">
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Alimentación sana">
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Bienestar">
+            </div>
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="col-lg-7 servicio-info">
+          <div class="d-flex mb-3">
+            <span class="section-eyebrow"><i class="fas fa-circle-dot" style="font-size:.5rem"></i> Nutrición y Bienestar</span>
+          </div>
+          <h2>No solo es cuidar tu salud,<br>es <em>cuidar tu vida</em></h2>
+          <p class="lead">
+            Contamos con Médico y Nutrióloga disponibles para brindarte una atención integral. Porque la salud verdadera va más allá de los números: se trata de cómo te sientes cada día, de tu energía, tu ánimo y tu calidad de vida.
+          </p>
+
+          <!-- Frase inspiracional -->
+          <div class="quote-card">
+            <blockquote>"El ejercicio es el rey, la nutrición es la reina,<br>ponlos juntos y tendrás un reino."</blockquote>
+            <cite>— Jack LaLanne</cite>
+          </div>
+
+          <!-- Stats -->
+          <div class="stats-row">
+            <div class="stat-box">
+              <div class="sv">Integral</div>
+              <div class="sl">Atención médica</div>
+            </div>
+            <div class="stat-box">
+              <div class="sv">Plan</div>
+              <div class="sl">Personalizado</div>
+            </div>
+            <div class="stat-box">
+              <div class="sv">100%</div>
+              <div class="sl">Tu bienestar</div>
+            </div>
+          </div>
+
+          <!-- Features -->
+          <ul class="feature-list">
+            <li>
+              <span class="fi-icon"><i class="fas fa-user-doctor"></i></span>
+              <span><strong>Consulta médica y nutricional</strong> integrada en una sola visita</span>
+            </li>
+            <li>
+              <span class="fi-icon"><i class="fas fa-apple-whole"></i></span>
+              <span>Plan de alimentación personalizado según tus metas y estilo de vida</span>
+            </li>
+            <li>
+              <span class="fi-icon"><i class="fas fa-chart-line"></i></span>
+              <span>Seguimiento y control de peso con métricas de progreso</span>
+            </li>
+            <li>
+              <span class="fi-icon"><i class="fas fa-dumbbell"></i></span>
+              <span>Orientación sobre hábitos de ejercicio complementarios a tu nutrición</span>
+            </li>
+            <li>
+              <span class="fi-icon"><i class="fas fa-shield-heart"></i></span>
+              <span>Prevención de enfermedades crónicas a través de la alimentación</span>
+            </li>
+          </ul>
+
+          <div class="cta-actions" style="justify-content:flex-start;">
+            <a href="/contacto" class="btn-cta-white" style="background:var(--green-600);color:#fff;">
+              <i class="fas fa-calendar-check"></i> Agenda tu cita
+            </a>
+            <a href="https://wa.me/524921297099" class="btn-cta-ghost" style="border-color:var(--green-200);color:var(--green-600);">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PILARES -->
+      <div class="text-center mt-5 pt-3 mb-3">
+        <span class="section-eyebrow"><i class="fas fa-circle-dot" style="font-size:.5rem"></i> Tu bienestar completo</span>
+        <h2 style="font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:400;color:var(--gray-900);margin-top:.8rem;">
+          Los pilares de una <em style="color:var(--green-600);font-style:italic">vida saludable</em>
+        </h2>
+      </div>
+      <div class="pilares-grid">
+        <div class="pilar-card">
+          <div class="pilar-icon"><i class="fas fa-apple-whole"></i></div>
+          <h5>Nutrición balanceada</h5>
+          <p>Alimentación que nutre y energiza tu cuerpo cada día.</p>
+        </div>
+        <div class="pilar-card">
+          <div class="pilar-icon"><i class="fas fa-dumbbell"></i></div>
+          <h5>Actividad física</h5>
+          <p>Ejercicio adaptado a tus capacidades y objetivos.</p>
+        </div>
+        <div class="pilar-card">
+          <div class="pilar-icon"><i class="fas fa-moon"></i></div>
+          <h5>Descanso y sueño</h5>
+          <p>El descanso es parte fundamental del proceso de salud.</p>
+        </div>
+        <div class="pilar-card">
+          <div class="pilar-icon"><i class="fas fa-heart-pulse"></i></div>
+          <h5>Seguimiento médico</h5>
+          <p>Control periódico para medir tu evolución y ajustar tu plan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="contacto">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="d-flex justify-content-center mb-3">
+          <span class="section-eyebrow" style="border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.1);color:rgba(255,255,255,.8);">Agenda hoy</span>
+        </div>
+        <h2 class="cta-heading">¿Lista para construir<br><em>tu reino de bienestar?</em></h2>
+        <p class="cta-sub">Agenda tu cita con la nutrióloga y da el primer paso hacia una vida plena, con energía y salud.</p>
+        <div class="cta-actions">
+          <a href="/contacto" class="btn-cta-white">
+            <i class="fas fa-calendar-check"></i> Agendar cita
+          </a>
+          <a href="https://wa.me/524921297099" class="btn-cta-ghost">
+            <i class="fas fa-phone"></i> +52 492 129 7099
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5 col-md-6">
+        <div class="footer-brand"><img src="/assets/img/logo/logo-mediwork.svg" alt="Mediwork" style="height:30px;width:auto;filter:brightness(0) invert(1);opacity:.9;"></div>
+        <p style="max-width:34ch;line-height:1.7;">
+          Exámenes médicos ocupacionales para empresas en Zacatecas, con los más altos estándares de calidad y servicio.
+        </p>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <h6>Navegación</h6>
+        <ul class="footer-links">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/servicios">Servicios</a></li>
+          <li><a href="/nosotros">Nosotros</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <h6>Especialidades</h6>
+        <ul class="footer-links">
+          <li><a href="/servicios">Oftalmología</a></li>
+          <li><a href="/servicios">Laboratorio Clínico</a></li>
+          <li><a href="/servicios">Radiología</a></li>
+          <li><a href="/servicios">Medicina del Trabajo</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h6>Contacto</h6>
+        <ul class="footer-links">
+          <li><a href="tel:+524921297099"><i class="fas fa-phone me-2" style="color:var(--blue-500)"></i>+52 492 129 7099</a></li>
+          <li><a href="tel:+524923076796"><i class="fas fa-phone me-2" style="color:var(--blue-500)"></i>+52 492 307 6796</a></li>
+          <li><a href="/contacto"><i class="fas fa-map-marker-alt me-2" style="color:var(--blue-500)"></i>Guadalupe, Zacatecas</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="footer-bottom">
+      <span>&copy; 2025 MediWork · Salud ocupacional que inspira confianza</span>
+      <div style="display:flex;gap:1rem;">
+        <a href="/privacidad" style="color:var(--gray-400);font-size:.8rem;text-decoration:none;">Privacidad</a>
+        <a href="/terminos" style="color:var(--gray-400);font-size:.8rem;text-decoration:none;">Términos</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

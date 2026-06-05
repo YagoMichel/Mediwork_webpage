@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       try {
-        const API_URL = 'http://localhost:8080/api/contacto';
+        const API_URL = '/api/contacto';
         const response = await fetch(API_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },

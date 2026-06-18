@@ -21,7 +21,7 @@ public class ApiMail {
         try {
             java.net.Socket socket = new java.net.Socket();
             socket.connect(
-                    new java.net.InetSocketAddress("smtp.gmail.com", 465),
+                    new java.net.InetSocketAddress("smtp.gmail.com", 25),
                     5000
             );
             socket.close();

@@ -1,0 +1,5 @@
+com\laia\medikwork\controllers\HomeController.class
+com\laia\medikwork\MedikworkApplication.class
+com\laia\medikwork\Models\MailModel.class
+com\laia\medikwork\controllers\ApiMail.class
+com\laia\medikwork\Services\MailServices.class

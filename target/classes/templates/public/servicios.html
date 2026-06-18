@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Servicios | Medical</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="shortcut icon" href="/assets/img/logo/favicon.png" />
+  <link rel="stylesheet" href="assets/css/servicios.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+    <div class="container">
+      <!-- Brand -->
+      <a class="navbar-brand" href="/" style="display:flex;align-items:center;padding:0;">
+        <img src="/assets/img/logo/logo-mediwork.svg" alt="Mediwork" style="height:38px;width:auto;display:block;">
+      </a>
+
+      <!-- Mobile toggler -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Contenido colapsable -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Enlaces principales centrados o a la izquierda -->
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="/servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="/nosotros">Nosotros</a></li>
+        </ul>
+
+        <!-- Acciones a la derecha: teléfono, login, cita -->
+        <ul class="navbar-nav align-items-lg-center ms-lg-4 gap-2">
+          <!-- Teléfono (solo número, sin "¿Necesitas ayuda?") -->
+          <li class="nav-item">
+            <a href="tel:+524921297099" class="nav-link d-flex align-items-center gap-1 fw-semibold"
+               style="font-size:0.88rem;">
+              <i class="fas fa-phone-alt" style="color:var(--blue-500);font-size:0.8rem;"></i>
+              <span class="d-none d-lg-inline">492 129 7099</span>
+            </a>
+          </li>
+          <!-- CTA -->
+          <li class="nav-item">
+            <a href="/contacto" class="nav-link nav-cta">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <span class="page-hero-eyebrow"><i class="fas fa-circle-dot" style="font-size:.55rem"></i> Nuestros servicios</span>
+      <h1>Exámenes <em>ocupacionales</em><br>y de salud laboral</h1>
+      <p>Catálogo completo de estudios médicos para evaluar la salud de tus trabajadores con los más altos estándares.</p>
+    </div>
+  </section>
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb-wrap">
+    <div class="container">
+      <a href="/">Inicio</a>
+      <span>/</span>
+      Servicios
+    </div>
+  </div>
+
+  <!-- SERVICIOS DETALLE -->
+  <section id="servicios-detail">
+    <div class="container">
+      <div class="text-center mb-5">
+        <div class="d-flex justify-content-center mb-3">
+          <span class="section-eyebrow"><i class="fas fa-circle-dot" style="font-size:.5rem"></i> Especialidades</span>
+        </div>
+        <h2 class="section-title">Cada estudio, <em style="font-style:italic;color:var(--blue-600)">a tu medida</em></h2>
+        <p class="section-sub mt-3">Haz clic en cada tarjeta para conocer todos los detalles de nuestros servicios ocupacionales.</p>
+      </div>
+
+      <div class="service-detail-grid">
+
+        <!-- Prueba Ruffer -->
+        <div class="service-detail-card"
+             data-title="Prueba Ruffer"
+             data-category="Evaluación Cardiovascular"
+             data-icon="fa-heart-pulse"
+             data-img="https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=800"
+             data-stat1-val="Cardio" data-stat1-label="evaluación cardiovascular"
+             data-stat2-val="3" data-stat2-label="mediciones clave"
+             data-stat3-val="5" data-stat3-label="niveles de aptitud"
+             data-description='["La prueba Ruffer es un examen médico fundamental para la evaluación de la aptitud física y cardiovascular. Permite determinar la capacidad del individuo para realizar actividades laborales que requieren esfuerzo físico, evaluando la respuesta del sistema cardiovascular al ejercicio controlado.","Los resultados proporcionan información valiosa sobre la salud cardiovascular del empleado y su capacidad para desempeñar tareas físicas en el entorno laboral."]'
+             data-features='["Protocolo estandarizado de 45 sentadillas en 45 segundos","Medición de frecuencia cardíaca basal, post-esfuerzo y recuperación","Cálculo del índice de Ruffier-Dickson","Clasificación de aptitud física laboral (excelente a insuficiente)"]'
+             onclick="openServiceModal(this)">
+          <div class="sdc-img-wrap">
+            <img src="https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Prueba Ruffer">
+            <div class="sdc-img-overlay"></div>
+            <span class="sdc-badge">Cardiovascular</span>
+            <div class="sdc-icon-float"><i class="fas fa-heart-pulse"></i></div>
+          </div>
+          <div class="sdc-body">
+            <h4>Prueba Ruffer</h4>
+            <p>Evalúa la aptitud física y cardiovascular del trabajador mediante un protocolo estandarizado de esfuerzo controlado.</p>
+            <div class="sdc-tags">
+              <span class="sdc-tag"><i class="fas fa-stopwatch me-1"></i>Esfuerzo controlado</span>
+              <span class="sdc-tag"><i class="fas fa-heart me-1"></i>Frecuencia cardíaca</span>
+              <span class="sdc-tag"><i class="fas fa-chart-line me-1"></i>Índice Ruffier</span>
+            </div>
+            <div class="sdc-cta">Ver detalles <i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+
+        <!-- Oftalmología -->
+        <div class="service-detail-card"
+             data-title="Oftalmología"
+             data-category="Salud Visual"
+             data-icon="fa-eye"
+             data-img="https://images.pexels.com/photos/5765827/pexels-photo-5765827.jpeg?auto=compress&cs=tinysrgb&w=800"
+             data-stat1-val="20/20" data-stat1-label="visión óptima"
+             data-stat2-val="4" data-stat2-label="pruebas incluidas"
+             data-stat3-val="Ocular" data-stat3-label="salud visual integral"
+             data-description='["Realizamos exámenes oftalmológicos completos para evaluar la salud visual de los trabajadores. Nuestro servicio incluye pruebas de agudeza visual, detección temprana de patologías oculares y valoración de la capacidad visual para actividades laborales específicas.","Este examen es especialmente importante para trabajadores que realizan tareas que requieren precisión visual, trabajan con pantallas digitales o en condiciones que pueden afectar la salud ocular."]'
+             data-features='["Agudeza visual lejana y cercana","Refracción y retinoscopía","Tonometría (presión intraocular)","Fondo de ojo y detección de patologías"]'
+             onclick="openServiceModal(this)">
+          <div class="sdc-img-wrap">
+            <img src="https://images.pexels.com/photos/5765827/pexels-photo-5765827.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Oftalmología">
+            <div class="sdc-img-overlay"></div>
+            <span class="sdc-badge">Visual</span>
+            <div class="sdc-icon-float"><i class="fas fa-eye"></i></div>
+          </div>
+          <div class="sdc-body">
+            <h4>Oftalmología</h4>
+            <p>Examen visual completo que evalúa agudeza, presión intraocular y salud ocular para tareas de precisión.</p>
+            <div class="sdc-tags">
+              <span class="sdc-tag"><i class="fas fa-eye me-1"></i>Agudeza visual</span>
+              <span class="sdc-tag"><i class="fas fa-microscope me-1"></i>Fondo de ojo</span>
+              <span class="sdc-tag"><i class="fas fa-compress-alt me-1"></i>Tonometría</span>
+            </div>
+            <div class="sdc-cta">Ver detalles <i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+
+        <!-- Biometría Hemática -->
+        <div class="service-detail-card"
+             data-title="Biometría Hemática"
+             data-category="Análisis de Sangre"
+             data-icon="fa-vial"
+             data-img="https://images.pexels.com/photos/4226769/pexels-photo-4226769.jpeg?auto=compress&cs=tinysrgb&w=800"
+             data-stat1-val="Sangre" data-stat1-label="análisis completo"
+             data-stat2-val="12+" data-stat2-label="parámetros evaluados"
+             data-stat3-val="99%" data-stat3-label="precisión diagnóstica"
+             data-description='["La biometría hemática es un análisis completo de sangre que evalúa los principales componentes sanguíneos: glóbulos rojos, glóbulos blancos y plaquetas. Este examen ayuda a detectar condiciones como anemia, infecciones, trastornos de coagulación y otras alteraciones hematológicas.","Es un estudio fundamental en los exámenes ocupacionales ya que permite identificar problemas de salud que podrían afectar el desempeño laboral o que podrían agravarse debido a las condiciones de trabajo."]'
+             data-features='["Recuento de glóbulos rojos, blancos y plaquetas","Hemoglobina y hematocrito","Detección de anemia e infecciones","Resultados rápidos y confiables"]'
+             onclick="openServiceModal(this)">
+          <div class="sdc-img-wrap">
+            <img src="https://images.pexels.com/photos/4226769/pexels-photo-4226769.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Biometría Hemática">
+            <div class="sdc-img-overlay"></div>
+            <span class="sdc-badge">Hematología</span>
+            <div class="sdc-icon-float"><i class="fas fa-vial"></i></div>
+          </div>
+          <div class="sdc-body">
+            <h4>Biometría Hemática</h4>
+            <p>Análisis completo de componentes sanguíneos para detectar anemia, infecciones y alteraciones hematológicas.</p>
+            <div class="sdc-tags">
+              <span class="sdc-tag"><i class="fas fa-droplet me-1"></i>Glóbulos rojos</span>
+              <span class="sdc-tag"><i class="fas fa-shield-virus me-1"></i>Glóbulos blancos</span>
+              <span class="sdc-tag"><i class="fas fa-clock me-1"></i>Resultados rápidos</span>
+            </div>
+            <div class="sdc-cta">Ver detalles <i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+
+        <!-- Química Sanguínea -->
+        <div class="service-detail-card"
+             data-title="Química Sanguínea"
+             data-category="Perfil Metabólico"
+             data-icon="fa-flask"
+             data-img="https://images.pexels.com/photos/3938023/pexels-photo-3938023.jpeg?auto=compress&cs=tinysrgb&w=800"
+             data-stat1-val="6" data-stat1-label="perfiles disponibles"
+             data-stat2-val="Metabólico" data-stat2-label="perfil completo"
+             data-stat3-val="15+" data-stat3-label="biomarcadores"
+             data-description='["La química sanguínea es un conjunto de pruebas que miden diferentes sustancias químicas en la sangre. Incluye análisis de glucosa, colesterol, triglicéridos, ácido úrico, enzimas hepáticas, proteínas y electrolitos.","Este examen es esencial para evaluar la función de órganos vitales como el hígado y los riñones, así como para identificar factores de riesgo cardiovascular y metabólico que podrían afectar la salud y el desempeño laboral."]'
+             data-features='["Perfil de glucosa y lípidos","Función hepática (enzimas y proteínas)","Función renal (creatinina, urea, ácido úrico)","Electrolitos y equilibrio metabólico"]'
+             onclick="openServiceModal(this)">
+          <div class="sdc-img-wrap">
+            <img src="https://images.pexels.com/photos/3938023/pexels-photo-3938023.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Química Sanguínea">
+            <div class="sdc-img-overlay"></div>
+            <span class="sdc-badge">Metabólico</span>
+            <div class="sdc-icon-float"><i class="fas fa-flask"></i></div>
+          </div>
+          <div class="sdc-body">
+            <h4>Química Sanguínea</h4>
+            <p>Mide glucosa, lípidos y función hepática y renal para identificar factores de riesgo cardiovascular y metabólico.</p>
+            <div class="sdc-tags">
+              <span class="sdc-tag"><i class="fas fa-sugar-cube me-1"></i>Glucosa</span>
+              <span class="sdc-tag"><i class="fas fa-liver me-1"></i>Función hepática</span>
+              <span class="sdc-tag"><i class="fas fa-kidney me-1"></i>Función renal</span>
+            </div>
+            <div class="sdc-cta">Ver detalles <i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+
+        <!-- Antidoping -->
+        <div class="service-detail-card"
+             data-title="Antidoping"
+             data-category="Seguridad Laboral"
+             data-icon="fa-shield-halved"
+             data-img="https://images.pexels.com/photos/5726837/pexels-photo-5726837.jpeg?auto=compress&cs=tinysrgb&w=800"
+             data-stat1-val="8+" data-stat1-label="sustancias detectadas"
+             data-stat2-val="100%" data-stat2-label="confidencialidad"
+             data-stat3-val="ISO" data-stat3-label="certificación"
+             data-description='["El examen antidoping es una prueba diseñada para detectar la presencia de drogas o sustancias prohibidas en el organismo. Este análisis es fundamental en entornos laborales donde la seguridad es primordial y donde el uso de sustancias podría comprometer la seguridad del trabajador y sus compañeros.","Realizamos pruebas antidoping con los más altos estándares de confidencialidad y precisión, asegurando resultados confiables que contribuyen a mantener un entorno laboral seguro y saludable."]'
+             data-features='["Detección de múltiples sustancias","Resultados confidenciales y seguros","Cadena de custodia certificada","Cumplimiento normativo laboral"]'
+             onclick="openServiceModal(this)">
+          <div class="sdc-img-wrap">
+            <img src="https://images.pexels.com/photos/5726837/pexels-photo-5726837.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Antidoping">
+            <div class="sdc-img-overlay"></div>
+            <span class="sdc-badge">Seguridad</span>
+            <div class="sdc-icon-float"><i class="fas fa-shield-halved"></i></div>
+          </div>
+          <div class="sdc-body">
+            <h4>Antidoping</h4>
+            <p>Detección confidencial de drogas y sustancias prohibidas en el entorno laboral.</p>
+            <div class="sdc-tags">
+              <span class="sdc-tag"><i class="fas fa-lock me-1"></i>Confidencial</span>
+              <span class="sdc-tag"><i class="fas fa-link me-1"></i>Cadena custodia</span>
+              <span class="sdc-tag"><i class="fas fa-certificate me-1"></i>Certificado</span>
+            </div>
+            <div class="sdc-cta">Ver detalles <i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+
+        <!-- Examen de Orina -->
+        <div class="service-detail-card"
+             data-title="Examen de Orina"
+             data-category="Urología"
+             data-icon="fa-microscope"
+             data-img="https://images.pexels.com/photos/4226765/pexels-photo-4226765.jpeg?auto=compress&cs=tinysrgb&w=800"
+             data-stat1-val="3" data-stat1-label="tipos de análisis"
+             data-stat2-val="Renal" data-stat2-label="función evaluada"
+             data-stat3-val="20+" data-stat3-label="parámetros"
+             data-description='["El examen general de orina es una prueba diagnóstica que analiza las características físicas, químicas y microscópicas de la orina. Permite detectar infecciones urinarias, enfermedades renales, diabetes y otros trastornos metabólicos.","Este estudio es parte fundamental de los exámenes ocupacionales ya que proporciona información valiosa sobre el estado de salud general del empleado y puede revelar condiciones que requieren atención médica inmediata o seguimiento."]'
+             data-features='["Análisis físico-químico completo","Examen microscópico de sedimento","Detección de infecciones urinarias","Evaluación de función renal"]'
+             onclick="openServiceModal(this)">
+          <div class="sdc-img-wrap">
+            <img src="https://images.pexels.com/photos/4226765/pexels-photo-4226765.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Examen de Orina">
+            <div class="sdc-img-overlay"></div>
+            <span class="sdc-badge">Urología</span>
+            <div class="sdc-icon-float"><i class="fas fa-microscope"></i></div>
+          </div>
+          <div class="sdc-body">
+            <h4>Examen de Orina</h4>
+            <p>Analiza las características físicas, químicas y microscópicas de la orina para detectar infecciones y enfermedades renales.</p>
+            <div class="sdc-tags">
+              <span class="sdc-tag"><i class="fas fa-atom me-1"></i>Físico-químico</span>
+              <span class="sdc-tag"><i class="fas fa-bacteria me-1"></i>Infecciones</span>
+              <span class="sdc-tag"><i class="fas fa-kidney me-1"></i>Función renal</span>
+            </div>
+            <div class="sdc-cta">Ver detalles <i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+
+        <!-- Rayos X -->
+        <div class="service-detail-card"
+             data-title="Rayos X"
+             data-category="Diagnóstico por Imagen"
+             data-icon="fa-x-ray"
+             data-img="https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&w=800"
+             data-stat1-val="HD" data-stat1-label="imágenes digitales"
+             data-stat2-val="3" data-stat2-label="tipos de estudios"
+             data-stat3-val="100%" data-stat3-label="protección radiológica"
+             data-description='["Los estudios de rayos X son imágenes diagnósticas que permiten visualizar estructuras internas del cuerpo, especialmente los huesos y algunas estructuras de tejidos blandos. En el ámbito laboral, se utilizan principalmente para evaluar la salud pulmonar y ósea.","Contamos con equipos modernos y personal capacitado para realizar estudios de rayos X de tórax, columna vertebral y extremidades, cumpliendo con todas las medidas de seguridad y protección radiológica."]'
+             data-features='["Rayos X de tórax (salud pulmonar)","Columna vertebral y extremidades","Equipos digitales de alta resolución","Protección radiológica certificada"]'
+             onclick="openServiceModal(this)">
+          <div class="sdc-img-wrap">
+            <img src="https://images.pexels.com/photos/3825586/pexels-photo-3825586.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Rayos X">
+            <div class="sdc-img-overlay"></div>
+            <span class="sdc-badge">Imagen</span>
+            <div class="sdc-icon-float"><i class="fas fa-x-ray"></i></div>
+          </div>
+          <div class="sdc-body">
+            <h4>Rayos X</h4>
+            <p>Imágenes de tórax, columna y extremidades para evaluar salud pulmonar y ósea.</p>
+            <div class="sdc-tags">
+              <span class="sdc-tag"><i class="fas fa-lungs me-1"></i>Tórax</span>
+              <span class="sdc-tag"><i class="fas fa-bone me-1"></i>Columna</span>
+              <span class="sdc-tag"><i class="fas fa-radiation me-1"></i>Radioprotección</span>
+            </div>
+            <div class="sdc-cta">Ver detalles <i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+
+        <!-- Audiometría -->
+        <div class="service-detail-card"
+             data-title="Audiometría"
+             data-category="Salud Auditiva"
+             data-icon="fa-ear-listen"
+             data-img="https://images.pexels.com/photos/8460025/pexels-photo-8460025.jpeg?auto=compress&cs=tinysrgb&w=800"
+             data-stat1-val="8" data-stat1-label="frecuencias evaluadas"
+             data-stat2-val="dB" data-stat2-label="umbral de audición"
+             data-stat3-val="ISO" data-stat3-label="equipo calibrado"
+             data-description='["La audiometría es un examen que evalúa la capacidad auditiva, determinando los umbrales de audición a diferentes frecuencias. Es especialmente importante en entornos laborales con exposición a ruido, donde la conservación de la audición es una prioridad.","Nuestros estudios audiométricos son realizados por personal especializado, utilizando equipos calibrados que garantizan resultados precisos para la evaluación y seguimiento de la salud auditiva de los trabajadores."]'
+             data-features='["Umbrales auditivos por frecuencia","Cabina sonoamortiguada","Equipo calibrado certificado","Seguimiento auditivo ocupacional"]'
+             onclick="openServiceModal(this)">
+          <div class="sdc-img-wrap">
+            <img src="https://images.pexels.com/photos/8460025/pexels-photo-8460025.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Audiometría">
+            <div class="sdc-img-overlay"></div>
+            <span class="sdc-badge">Auditivo</span>
+            <div class="sdc-icon-float"><i class="fas fa-ear-listen"></i></div>
+          </div>
+          <div class="sdc-body">
+            <h4>Audiometría</h4>
+            <p>Evaluación auditiva con umbrales por frecuencia para conservación de la audición.</p>
+            <div class="sdc-tags">
+              <span class="sdc-tag"><i class="fas fa-wave-square me-1"></i>Frecuencias</span>
+              <span class="sdc-tag"><i class="fas fa-volume-xmark me-1"></i>Cabina aislada</span>
+              <span class="sdc-tag"><i class="fas fa-chart-bar me-1"></i>Audiograma</span>
+            </div>
+            <div class="sdc-cta">Ver detalles <i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+
+        <!-- Espirometría -->
+        <div class="service-detail-card"
+             data-title="Espirometría"
+             data-category="Función Pulmonar"
+             data-icon="fa-lungs"
+             data-img="https://images.pexels.com/photos/5327580/pexels-photo-5327580.jpeg?auto=compress&cs=tinysrgb&w=800"
+             data-stat1-val="CVF" data-stat1-label="capacidad vital forzada"
+             data-stat2-val="VEF1" data-stat2-label="volumen espiratorio"
+             data-stat3-val="ATS" data-stat3-label="norma internacional"
+             data-description='["La espirometría es un estudio que evalúa la función pulmonar, midiendo la capacidad y el flujo de aire durante la respiración. Es fundamental para detectar enfermedades respiratorias obstructivas, restrictivas o mixtas que podrían afectar el desempeño laboral.","Este examen es particularmente importante para trabajadores expuestos a polvos, humos, gases o vapores que podrían comprometer la salud respiratoria, permitiendo la detección temprana de alteraciones y la implementación de medidas preventivas."]'
+             data-features='["Capacidad vital forzada (CVF)","Volumen espiratorio forzado (VEF1)","Interpretación para uso ocupacional","Detección temprana de alteraciones"]'
+             onclick="openServiceModal(this)">
+          <div class="sdc-img-wrap">
+            <img src="https://images.pexels.com/photos/5327580/pexels-photo-5327580.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Espirometría">
+            <div class="sdc-img-overlay"></div>
+            <span class="sdc-badge">Respiratorio</span>
+            <div class="sdc-icon-float"><i class="fas fa-lungs"></i></div>
+          </div>
+          <div class="sdc-body">
+            <h4>Espirometría</h4>
+            <p>Función pulmonar: detección de enfermedades respiratorias obstructivas y restrictivas.</p>
+            <div class="sdc-tags">
+              <span class="sdc-tag"><i class="fas fa-wind me-1"></i>CVF</span>
+              <span class="sdc-tag"><i class="fas fa-chart-area me-1"></i>VEF1</span>
+              <span class="sdc-tag"><i class="fas fa-smog me-1"></i>Polvo y gases</span>
+            </div>
+            <div class="sdc-cta">Ver detalles <i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+
+        <!-- Revisión Médica General -->
+        <div class="service-detail-card center-last"
+             data-title="Revisión Médica General"
+             data-category="Medicina Ocupacional"
+             data-icon="fa-stethoscope"
+             data-img="https://images.pexels.com/photos/7088530/pexels-photo-7088530.jpeg?auto=compress&cs=tinysrgb&w=800"
+             data-stat1-val="Integral" data-stat1-label="evaluación completa"
+             data-stat2-val="100%" data-stat2-label="certificado aptitud"
+             data-stat3-val="8+" data-stat3-label="sistemas evaluados"
+             data-description='["La revisión médica general es una evaluación integral del estado de salud que incluye historia clínica, exploración física completa y valoración de signos vitales. Este examen permite detectar condiciones médicas preexistentes y evaluar la aptitud del trabajador para desempeñar sus funciones.","Nuestros médicos ocupacionales realizan evaluaciones detalladas, considerando los riesgos específicos de cada puesto de trabajo, para garantizar que cada empleado cuente con las condiciones de salud óptimas para su desempeño laboral."]'
+             data-features='["Historia clínica completa","Exploración física por sistemas","Valoración de signos vitales","Dictamen de aptitud laboral"]'
+             onclick="openServiceModal(this)">
+          <div class="sdc-img-wrap">
+            <img src="https://images.pexels.com/photos/7088530/pexels-photo-7088530.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Revisión Médica General">
+            <div class="sdc-img-overlay"></div>
+            <span class="sdc-badge">Integral</span>
+            <div class="sdc-icon-float"><i class="fas fa-stethoscope"></i></div>
+          </div>
+          <div class="sdc-body">
+            <h4>Revisión Médica General</h4>
+            <p>Evaluación integral del estado de salud mediante historia clínica, exploración física y dictamen de aptitud laboral.</p>
+            <div class="sdc-tags">
+              <span class="sdc-tag"><i class="fas fa-clipboard-list me-1"></i>Historia clínica</span>
+              <span class="sdc-tag"><i class="fas fa-stethoscope me-1"></i>Exploración física</span>
+              <span class="sdc-tag"><i class="fas fa-id-card me-1"></i>Certificado</span>
+            </div>
+            <div class="sdc-cta">Ver detalles <i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- SERVICIO EN CAMPO -->
+  <!-- SERVICIO EN CAMPO (ENFOCADO A EMPRESAS) -->
+  <section id="servicio-campo">
+    <div class="container">
+      <div class="campo-content">
+        <div class="campo-text">
+          <div class="reveal d-flex mb-3">
+            <span class="section-eyebrow"><i class="fas fa-circle-dot" style="font-size:.55rem"></i> Para empresas</span>
+          </div>
+          <h2 class="reveal reveal-delay-1">Servicio <em>en Campo</em></h2>
+          <p class="reveal reveal-delay-2">
+            En <strong>MediWork</strong> sabemos que el tiempo de su equipo es valioso.
+            Nuestro <strong>servicio médico móvil</strong> está diseñado para llevar la salud ocupacional
+            directamente a sus instalaciones, evitando desplazamientos y reduciendo interrupciones en la operación.
+          </p>
+          <p class="reveal reveal-delay-2">
+            Contamos con un <strong>remolque completamente equipado</strong> con áreas específicas para cada tipo de examen,
+            equipo de última generación y personal altamente capacitado.
+            Todo bajo los mismos estándares de calidad, confidencialidad y seguridad de nuestras clínicas fijas.
+          </p>
+
+          <div class="beneficios-grid">
+            <div class="beneficio-item reveal reveal-delay-1">
+              <div class="beneficio-icon"><i class="fas fa-clock"></i></div>
+              <div class="beneficio-text">
+                <h6>Mínima interrupción</h6>
+                <p>Reducimos el tiempo fuera del puesto de trabajo.</p>
+              </div>
+            </div>
+            <div class="beneficio-item reveal reveal-delay-2">
+              <div class="beneficio-icon"><i class="fas fa-dollar-sign"></i></div>
+              <div class="beneficio-text">
+                <h6>Ahorro de costos</h6>
+                <p>Elimina gastos de transporte, viáticos y horas muertas.</p>
+              </div>
+            </div>
+            <div class="beneficio-item reveal reveal-delay-3">
+              <div class="beneficio-icon"><i class="fas fa-calendar-check"></i></div>
+              <div class="beneficio-text">
+                <h6>Agilidad operativa</h6>
+                <p>Atendemos a gran número colaboradores por jornada, según los exámenes requeridos.</p>
+              </div>
+            </div>
+            <div class="beneficio-item reveal reveal-delay-4">
+              <div class="beneficio-icon"><i class="fas fa-building"></i></div>
+              <div class="beneficio-text">
+                <h6>Adaptabilidad total</h6>
+                <p>Nos ajustamos a los espacios, horarios y necesidades de su empresa.</p>
+              </div>
+            </div>
+            <div class="beneficio-item reveal reveal-delay-1">
+              <div class="beneficio-icon"><i class="fas fa-file-contract"></i></div>
+              <div class="beneficio-text">
+                <h6>Cumplimiento normativo</h6>
+                <p>Exámenes válidos para auditorías y requisitos legales de salud ocupacional.</p>
+              </div>
+            </div>
+            <div class="beneficio-item reveal reveal-delay-2">
+              <div class="beneficio-icon"><i class="fas fa-shield-alt"></i></div>
+              <div class="beneficio-text">
+                <h6>Confidencialidad garantizada</h6>
+                <p>Manejo ético y seguro de la información médica de sus trabajadores.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="campo-image reveal reveal-delay-2">
+          <img src="assets/img/images/UnidadMovil.png"
+               alt="Unidad móvil médica de MediWork totalmente equipada"
+               style="width:100%; height:auto; border-radius:12px; display:block;">
+          <p>Unidad móvil <br>totalmente equipada</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS ADICIONALES Y PROMOCIONES -->
+  <section id="servicios-adicionales">
+    <div class="container">
+      <div class="text-center mb-5">
+        <div class="reveal d-flex justify-content-center mb-3">
+          <span class="section-eyebrow"><i class="fas fa-circle-dot" style="font-size:.55rem"></i> Promociones </span>
+        </div>
+        <h2 class="section-title reveal reveal-delay-1">Servicios <em style="font-style:italic;color:var(--blue-600)">Adicionales</em> y Promociones</h2>
+      </div>
+
+      <div class="adicional-grid">
+
+        <!-- Venta de Lentes -->
+        <div class="adicional-card reveal reveal-delay-1">
+          <div class="adicional-icon"><i class="fas fa-glasses"></i></div>
+          <h4>Venta de Lentes</h4>
+          <p>Ofrecemos una amplia variedad de lentes de alta calidad a precios especiales para empleados de empresas clientes. Modelos para diferentes necesidades visuales y estilos, cumpliendo los más altos estándares.</p>
+          <a href="/optica" class="sdc-link">Más información <i class="fas fa-arrow-right" style="font-size:.65rem"></i></a>
+        </div>
+
+        <!-- Ultrasonido -->
+        <div class="adicional-card reveal reveal-delay-2">
+          <div class="adicional-icon"><i class="fas fa-wave-square"></i></div>
+          <h4>Ultrasonido</h4>
+          <p>Servicios de ultrasonido diagnóstico con equipos de alta resolución. Método no invasivo que permite visualizar órganos internos y detectar posibles anomalías para diagnósticos tempranos.</p>
+          <a href="/ultrasonido" class="sdc-link">Más información <i class="fas fa-arrow-right" style="font-size:.65rem"></i></a>
+        </div>
+
+        <!-- Nutrición -->
+        <div class="adicional-card reveal reveal-delay-3">
+          <div class="adicional-icon"><i class="fas fa-apple-alt"></i></div>
+          <h4>Asesoría Nutricional</h4>
+          <p>Planes de alimentación personalizados, enfocados en mejorar la salud general, controlar el peso y prevenir enfermedades relacionadas con la alimentación.</p>
+          <a href="/nutriologia" class="sdc-link">Más información <i class="fas fa-arrow-right" style="font-size:.65rem"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section id="proceso">
+    <div class="container">
+      <div class="text-center mb-5">
+        <div class="d-flex justify-content-center mb-3">
+          <span class="section-eyebrow"><i class="fas fa-circle-dot" style="font-size:.5rem"></i> Cómo funciona</span>
+        </div>
+        <h2 class="section-title">Proceso <em style="font-style:italic;color:var(--blue-600)">simple y rápido</em></h2>
+        <p class="section-sub mt-3">En cuatro pasos realizamos los exámenes ocupacionales que tu empresa necesita.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <h5>Elige los estudios</h5>
+          <p>Selecciona los exámenes ocupacionales que necesitas de nuestro catálogo completo.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <h5>Agenda las citas</h5>
+          <p>Programa fecha, hora y lugar para la realización de los estudios de tus empleados.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <h5>Realizamos los exámenes</h5>
+          <p>Nuestro equipo acude a tu empresa o recibe a tus trabajadores en nuestras instalaciones.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <h5>Entrega de resultados</h5>
+          <p>Recibe informes detallados y certificados de aptitud laboral en formato digital.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="text-center mb-5">
+        <div class="d-flex justify-content-center mb-3">
+          <span class="section-eyebrow"><i class="fas fa-circle-dot" style="font-size:.5rem"></i> Preguntas frecuentes</span>
+        </div>
+        <h2 class="section-title">¿Tienes <em style="font-style:italic;color:var(--blue-600)">dudas?</em></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q open" onclick="toggleFaq(this)">
+            ¿Qué exámenes ocupacionales son obligatorios por ley?
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-a open">Los exámenes obligatorios varían según la legislación de cada país y el tipo de industria. Generalmente incluyen revisión médica general, audiometría, espirometría, biometría hemática, química sanguínea y examen de orina. Te asesoramos para cumplir con la normativa aplicable a tu empresa.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            ¿Realizan los exámenes en nuestras instalaciones?
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-a">Sí, contamos con unidades móviles equipadas para realizar la mayoría de los exámenes directamente en tu empresa, minimizando el tiempo de desplazamiento de tus empleados. También pueden acudir a nuestras clínicas.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            ¿Cuánto tardan en entregarse los resultados?
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-a">Los resultados de la mayoría de los estudios se entregan en un plazo de 24 a 72 horas. Los certificados de aptitud laboral se generan una vez integrados todos los resultados. Contamos con plataforma digital para consulta en línea.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            ¿Los resultados son confidenciales?
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-a">Absolutamente. Todos los resultados se manejan bajo estrictos protocolos de confidencialidad médica. La empresa recibe únicamente el dictamen de aptitud laboral, mientras que los detalles médicos permanecen resguardados en el expediente clínico del trabajador.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agendar-->
+  <section id="contacto">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="reveal d-flex justify-content-center mb-3">
+          <span class="section-eyebrow">Empieza hoy</span>
+        </div>
+        <h2 class="cta-heading reveal reveal-delay-1">
+          ¿Listo para cuidar<br>
+          <em>la salud de tu equipo?</em>
+        </h2>
+        <p class="cta-sub reveal reveal-delay-2">
+          Cotiza los exámenes ocupacionales que necesitas. Nuestro equipo te asesorará sin compromiso.
+        </p>
+        <div class="cta-actions reveal reveal-delay-3">
+          <a href="/contacto" class="btn-cta-white">
+            <i class="fas fa-calendar-check"></i> Contacto
+          </a>
+          <a href="https://wa.me/524921297099" class="btn-cta-ghost">
+            <i class="fas fa-phone"></i> +52 492 129 7099
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ═══════ MODAL REDISEÑADO ═══════ -->
+<div class="modal fade" id="serviceModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" style="border:none;border-radius:24px;overflow:hidden;">
+
+      <!-- Header visual -->
+      <div class="modal-visual-header" id="modalVisualHeader">
+        <img id="modalHeaderImg" src="" alt="" style="width:100%;height:100%;object-fit:cover;filter:brightness(.75) saturate(1.1);">
+        <div class="modal-visual-overlay">
+          <div class="modal-icon-badge" id="modalIconBadge"><i id="modalHeaderIcon" class="fas fa-stethoscope"></i></div>
+          <div class="modal-category" id="modalCategory"></div>
+          <h5 id="serviceModalLabel" style="font-family:'Playfair Display',serif;font-size:1.65rem;font-weight:400;color:#fff;line-height:1.2;margin:0;"></h5>
+        </div>
+        <button class="modal-close-btn" onclick="closeServiceModal()" aria-label="Cerrar">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body-custom">
+        <div class="modal-desc-text" id="modalDescription"></div>
+
+        <!-- Stats -->
+        <div class="modal-stats" id="modalStats">
+          <div class="modal-stat">
+            <div class="stat-value" id="stat1Val">—</div>
+            <div class="stat-label" id="stat1Label"></div>
+          </div>
+          <div class="modal-stat">
+            <div class="stat-value" id="stat2Val">—</div>
+            <div class="stat-label" id="stat2Label"></div>
+          </div>
+          <div class="modal-stat">
+            <div class="stat-value" id="stat3Val">—</div>
+            <div class="stat-label" id="stat3Label"></div>
+          </div>
+        </div>
+
+        <!-- Features -->
+        <div class="mt-4">
+          <div class="modal-features-title"><i class="fas fa-list-check me-1"></i> Incluye</div>
+          <div class="modal-features-grid" id="modalFeatures"></div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer-custom">
+        <button class="btn-modal-secondary" onclick="closeServiceModal()">
+          Cerrar
+        </button>
+        <a href="/contacto" class="btn-modal-primary">
+          <i class="fas fa-calendar-check"></i> Contacto
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-lg-5 col-md-6">
+        <div class="footer-brand"><img src="/assets/img/logo/logo-mediwork.svg" alt="Mediwork" style="height:30px;width:auto;filter:brightness(0) invert(1);opacity:.9;"></div>
+        <p style="max-width:34ch;line-height:1.7;">
+          Exámenes médicos ocupacionales para empresas en Zacatecas, con los más altos estándares de calidad y servicio.
+        </p>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-6">
+        <h6>Navegación</h6>
+        <ul class="footer-links">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/servicios">Servicios</a></li>
+          <li><a href="/nosotros">Nosotros</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-md-3 col-6">
+        <h6>Especialidades</h6>
+        <ul class="footer-links">
+          <li><a href="/servicios">Oftalmología</a></li>
+          <li><a href="/servicios">Laboratorio Clínico</a></li>
+          <li><a href="/servicios">Radiología</a></li>
+          <li><a href="/servicios">Medicina del Trabajo</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <h6>Contacto</h6>
+        <ul class="footer-links">
+          <li><a href="tel:+524921297099"><i class="fas fa-phone me-2" style="color:var(--blue-500)"></i>+52 492 129 7099</a></li>
+          <li><a href="tel:+524923076796"><i class="fas fa-phone me-2" style="color:var(--blue-500)"></i>+52 492 307 6796</a></li>
+          <li><a href="/contacto"><i class="fas fa-map-marker-alt me-2" style="color:var(--blue-500)"></i>Guadalupe, Zacatecas</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+      <span>&copy; 2025 MediWork · Salud ocupacional que inspira confianza</span>
+      <div style="display:flex;gap:1rem;">
+        <a href="/privacidad" style="color:var(--gray-400);font-size:.8rem;text-decoration:none;">Privacidad</a>
+        <a href="/terminos" style="color:var(--gray-400);font-size:.8rem;text-decoration:none;">Términos</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js" defer></script>
+
+  <script src="assets/js/servicios.js" defer></script>
+</body>
+</html>

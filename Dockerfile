@@ -1,10 +1,5 @@
-# Etapa de compilación
-FROM maven:3.9-amazoncorretto-17 AS build
-COPY . .
-RUN mvn clean install -DskipTests
-
-# Etapa final
 FROM amazoncorretto:17-alpine
-COPY --from=build /target/*.jar demo.jar
+ARG JAR_FILE=target/medikwork-0.0.1-SNAPSHOT.jar
+COPY ${JAR_FILE} app_mediwork.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "demo.jar"]
+ENTRYPOINT ["java", "-jar", "app_mediwork.jar"]

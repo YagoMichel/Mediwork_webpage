@@ -7,13 +7,28 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/contacto")
-@CrossOrigin(origins = "*") // Ajusta según tu frontend
+@CrossOrigin(origins = "*")
 public class ApiMail {
 
     private final MailServices emailService;
 
     public ApiMail(MailServices emailService) {
         this.emailService = emailService;
+    }
+
+    @GetMapping("/smtp-test")
+    public String smtpTest() {
+        try {
+            java.net.Socket socket = new java.net.Socket();
+            socket.connect(
+                    new java.net.InetSocketAddress("smtp.gmail.com", 587),
+                    5000
+            );
+            socket.close();
+            return "Conexion SMTP exitosa";
+        } catch (Exception e) {
+            return e.toString();
+        }
     }
 
     @PostMapping
@@ -24,7 +39,8 @@ public class ApiMail {
             return ResponseEntity.ok("Mensaje enviado correctamente");
         } catch (Exception e) {
             e.printStackTrace();
-            return ResponseEntity.status(500).body("Error al enviar el correo: " + e.getMessage());
+            return ResponseEntity.status(500)
+                    .body("Error al enviar el correo: " + e.getMessage());
         }
     }
 }

@@ -16,20 +16,20 @@ public class ApiMail {
         this.emailService = emailService;
     }
 
-    @GetMapping("/smtp-test")
-    public String smtpTest() {
-        try {
-            java.net.Socket socket = new java.net.Socket();
-            socket.connect(
-                    new java.net.InetSocketAddress("smtp.gmail.com", 25),
-                    5000
-            );
-            socket.close();
-            return "Conexion SMTP exitosa";
-        } catch (Exception e) {
-            return e.toString();
-        }
-    }
+//    @GetMapping("/smtp-test")
+//    public String smtpTest() {
+//        try {
+//            java.net.Socket socket = new java.net.Socket();
+//            socket.connect(
+//                    new java.net.InetSocketAddress("smtp.gmail.com", 587),
+//                    5000
+//            );
+//            socket.close();
+//            return "Conexion SMTP exitosa";
+//        } catch (Exception e) {
+//            return e.toString();
+//        }
+//    }
 
     @PostMapping
     public ResponseEntity<String> recibirFormulario(@RequestBody MailModel form) {
